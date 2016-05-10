@@ -17,6 +17,12 @@
    </ul>
   </header>
   <section>
+    <form>
+      <span>Minutes: <input type="text" id="mins" name="mins" value="0" size="1" maxlength="2"/></span>
+      <span>Seconds:<input type="text" id="secs" name="secs" value="0" size="1" maxlength="2"/></span>
+      <button type="button" id="btnct" value="START" onclick="countdownTimer()">Start</button>
+    </form>
+    <span>Countdown: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span></span>
       <table>
         <tr>
           <th colspan="2">Scoreboard</th>
