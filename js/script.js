@@ -28,6 +28,9 @@ function scissorsPlays() {
 function play(userTurn) {
   var botTurn = botChoice();
 
+  document.getElementById('playerResult').innerHTML = 'You played ' + userTurn;
+  document.getElementById('botResult').innerHTML = 'Bot played ' + botTurn;
+
 //Rock different choices
   if (userTurn == 'rock') {
     if(botTurn == 'rock') {
