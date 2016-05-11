@@ -11,9 +11,9 @@ html, body {
 }
 
 header {
-  background-color: #51C5A4;
-  height: 30%;
-  padding-top: 80px;
+  background-color: #2BADE0;
+  height: 45%;
+  padding-top: 60px;
 }
 
 #user-choice li {
@@ -27,7 +27,7 @@ header {
 }
 
 #user-choice li:hover {
-  background-color: #FF9179;
+  background-color: #102134;
 }
 
 .fa {
@@ -37,7 +37,7 @@ header {
 }
 
 section {
-  background-color: #FF9179;
+  background-color: #102134;
   height:70%;
   padding: 30px;
 }
@@ -47,6 +47,7 @@ table {
   border-color: rgba(255, 255, 255, 0.4);
   margin: auto;
   margin-top: 25px;
+  border-radius: 3px;
 }
 
 th {
@@ -60,17 +61,30 @@ td {
 }
 
 button {
-  border: 2px solid;
-  border-color: rgba(255, 255, 255, 0.4);
-  background-color: #FF9179;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #102134;
   color: white;
   margin-top: 20px;
   cursor: pointer;
+  border-radius: 3px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 15px;
 }
 
 button:hover {
   background-color: white;
-  color: #FF9179;
+  color: #102134;
+}
+
+button, .start {
+  background-color: #2BADE0;
+}
+
+button, .reset {
+  background-color: #102134;
+  margin-top: 10px;
 }
 
 #request {
@@ -79,6 +93,28 @@ button:hover {
 
 @media (max-width: 600px) {
   header {
-    height: 60%;
+    height:95%;
   }
+  input {
+    display: block;
+  }
+}
+
+form input {
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 80px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 300;
+}
+form input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }

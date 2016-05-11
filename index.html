@@ -10,6 +10,12 @@
 </head>
 <body>
   <header>
+    <form>
+      <span>Minutes: <input type="text" id="mins" value="0" size="1"/></span>
+      <span>Seconds:<input type="text" id="secs" value="0" size="1"/></span>
+      <button class="start" type="button" id="btnct" onclick="countdownTimer()">Start</button>
+    </form>
+    <span>Countdown: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span></span>
    <ul id="user-choice">
      <li id="rock"><i class="fa fa-hand-rock-o" aria-hidden="true"></i>Rock</li>
      <li id="paper"><i class="fa fa-hand-paper-o" aria-hidden="true"></i>Paper</li>
@@ -17,12 +23,6 @@
    </ul>
   </header>
   <section>
-    <form>
-      <span>Minutes: <input type="text" id="mins" name="mins" value="0" size="1" maxlength="2"/></span>
-      <span>Seconds:<input type="text" id="secs" name="secs" value="0" size="1" maxlength="2"/></span>
-      <button type="button" id="btnct" value="START" onclick="countdownTimer()">Start</button>
-    </form>
-    <span>Countdown: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span></span>
       <table>
         <tr>
           <th colspan="2">Scoreboard</th>
@@ -36,7 +36,7 @@
            <td id="botScore">0</td>
         </tr>
       </table>
-      <button id="reset"type="button" name="Reset">Reset</button>
+      <button class="reset" id="reset"type="button" name="Reset">Reset</button>
   </section>
 </body>
 <script src="js/script.js" charset="utf-8"></script>

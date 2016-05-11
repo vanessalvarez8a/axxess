@@ -91,10 +91,6 @@ function countdownTimer() {
     minutes = parseInt(document.getElementById('mins').value) + 0;
     secs = parseInt(document.getElementById('secs').value) * 1;
 
-    // if data not a number, sets the value to 0
-    // if(isNaN(ctmnts)) ctmnts = 0;
-    // if(isNaN(secs)) secs = 0;
-
     // rewrite data in form fields to be sure that the fields for minutes and seconds contain integer number
     document.getElementById('mins').value = minutes;
     document.getElementById('secs').value = secs;
