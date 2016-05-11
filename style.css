@@ -10,6 +10,9 @@ html, body {
   height:100%;
 }
 
+
+/* ALL STYLES FOR THE HEADER */
+
 header {
   background-color: #2BADE0;
   height: 45%;
@@ -35,6 +38,27 @@ header {
   padding: 1.2em;
   box-sizing: border-box;
 }
+
+form input {
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 80px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 300;
+}
+form input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ALL STYLES FOR THE SECTION */
 
 section {
   background-color: #102134;
@@ -87,9 +111,7 @@ button, .reset {
   margin-top: 10px;
 }
 
-#request {
-  color: black;
-}
+/* MEDIA QUERIES */
 
 @media (max-width: 600px) {
   header {
@@ -98,23 +120,4 @@ button, .reset {
   input {
     display: block;
   }
-}
-
-form input {
-  outline: 0;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 80px;
-  border-radius: 3px;
-  padding: 10px 15px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 18px;
-  color: white;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-  font-weight: 300;
-}
-form input:hover {
-  background-color: rgba(255, 255, 255, 0.4);
 }

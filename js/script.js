@@ -1,3 +1,4 @@
+// I start by creating an onclick action from the user it would trigger the rockPlays paperPlays scissorsPlays functions
 document.getElementById('rock').onclick = rockPlays;
 document.getElementById('paper').onclick = paperPlays;
 document.getElementById('scissors').onclick = scissorsPlays;
@@ -17,7 +18,7 @@ function scissorsPlays() {
   play('scissors');
 }
 
-//this botChoice function throws a random option for the bot
+//this botChoice function throws a random option of paper, rock and scissors for the bot
  function botChoice() {
   var choices = ['rock', 'paper', 'scissors'];
   var randomChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -28,6 +29,8 @@ function scissorsPlays() {
 function play(userTurn) {
   var botTurn = botChoice();
 
+
+// with the manipulation of the element id playerResult and botResult it would show the the results of the user and the bot
   document.getElementById('playerResult').innerHTML = 'You played ' + userTurn;
   document.getElementById('botResult').innerHTML = 'Bot played ' + botTurn;
 
@@ -67,6 +70,7 @@ function play(userTurn) {
       userScore++;
     }
   }
+  //This is the scoreboard that is adding points either to the user or to the bot
   document.getElementById('userScore').innerHTML = userScore;
   document.getElementById('botScore').innerHTML = botScore;
 
@@ -84,34 +88,27 @@ function reset() {
 
 var minutes = 0;
 var secs = 0;
-var startchr = 0;       // used to control when to read data from form
+var startchr = 0;
 
 function countdownTimer() {
-  // http://coursesweb.net/javascript/
-  // if $startchr is 0, and form fields exists, gets data for minutes and seconds, and sets $startchr to 1
   if(startchr == 0 && document.getElementById('mins') && document.getElementById('secs')) {
-    // makes sure the script uses integer numbers
+    // is important to grab the value the user inputs into the form and read it as an integer number which is why it needs to be parseInt
     minutes = parseInt(document.getElementById('mins').value) + 0;
     secs = parseInt(document.getElementById('secs').value) * 1;
-
-    // rewrite data in form fields to be sure that the fields for minutes and seconds contain integer number
     document.getElementById('mins').value = minutes;
     document.getElementById('secs').value = secs;
     startchr = 1;
-    document.getElementById('btnct').setAttribute('disabled', 'disabled');     // disable the button
+    //once the user clicks the start button, the button would be disabled until its back to be 00:00
+    document.getElementById('btnct').setAttribute('disabled', 'disabled');
   }
 
-  // if minutes and seconds are 0, sets $startchr to 0, and return false
+  // once the clock is back to be 00:00 the disabled setAttribute needs to be removed
   if(minutes==0 && secs==0) {
     startchr = 0;
-    document.getElementById('btnct').removeAttribute('disabled');     // remove "disabled" to enable the button
-
-    /* HERE YOU CAN ADD TO EXECUTE A JavaScript FUNCTION WHEN COUNTDOWN TIMER REACH TO 0 */
-
+    document.getElementById('btnct').removeAttribute('disabled');
     return false;
   }
   else {
-    // decrease seconds, and decrease minutes if seconds reach to 0
     secs--;
     if(secs < 0) {
       if(minutes > 0) {
@@ -124,8 +121,6 @@ function countdownTimer() {
       }
     }
   }
-
-  // display the time in page, and auto-calls this function after 1 seccond
   document.getElementById('showmns').innerHTML = minutes;
   document.getElementById('showscs').innerHTML = secs;
   setTimeout('countdownTimer()', 1000);
